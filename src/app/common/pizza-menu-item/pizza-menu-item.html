@@ -1,0 +1,9 @@
+<div class="pizza-menu-item col-xs-12" ng-click="$ctrl.selectPizza($ctrl.pizza)" ng-class="{active: $ctrl.pizza.description === $ctrl.selectedPizza.description}">
+  <img class="pizza-menu-item__image" ng-src="https://cdn-catalog.pizzahut.be/images/be/{{ $ctrl.pizza.images.DEFAULT }}" />
+  <div class="pizza-menu-item__description">
+    <h3 class="pizza-menu-item__title">
+      {{ $ctrl.pizza.description }}
+    </h3>
+    <p>{{ $ctrl.pizza.text }}</p>
+  </div>
+</div>

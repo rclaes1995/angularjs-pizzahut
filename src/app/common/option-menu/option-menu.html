@@ -1,0 +1,10 @@
+<div class="col-xs-4">
+  <div class="options-menu">
+    <h2 class="option-menu__title">
+      {{$ctrl.menuTitle}}
+    </h2>
+    <div class="option-menu__list">
+      <option-menu-item ng-repeat="option in $ctrl.options" option="option" selected-option="$ctrl.selectedOption" select-option="$ctrl.selectOption({option: option})"></option-menu-item>
+    </div>
+  </div>
+</div>

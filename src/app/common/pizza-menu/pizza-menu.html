@@ -1,0 +1,10 @@
+<div class="col-xs-4">
+  <div class="pizza-menu">
+    <h2 class="pizza-menu__title">
+      1. Choose a pizza
+    </h2>
+    <div class="pizza-menu__list">
+      <pizza-menu-item ng-repeat="pizza in $ctrl.pizzas" pizza="pizza" select-pizza="$ctrl.selectPizza({pizza: pizza})" selected-pizza="$ctrl.selectedPizza"></pizza-menu-item>
+    </div>
+  </div>
+</div>

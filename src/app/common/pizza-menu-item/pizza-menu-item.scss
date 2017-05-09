@@ -1,0 +1,45 @@
+.pizza-menu-item {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border: 1px solid #ccc;
+    margin-bottom: .5rem;
+    &:hover {
+        cursor: pointer;
+    }
+    &.active {
+        background: #2f2f2f;
+        color: white;
+        border: 1px solid #0f0f0f;
+        .option-menu-item__title {
+            &::after {
+                font-family: 'FontAwesome';
+                content: '\f004';
+            }
+        }
+        &:hover {
+            .option-menu-item__title {
+                color: white;
+            }
+        }
+    }
+    &:not(.active) {
+        &:hover {
+            background: #2f2f2f;
+            border: 1px solid #0f0f0f;
+            color: white;
+            transition: all .2s linear;
+        }
+    }
+}
+
+.pizza-menu-item__image {
+    height: auto;
+    width: 12rem;
+    margin: 1rem 2rem 1rem 0rem;
+}
+
+.pizza-menu-item__description {
+    display: flex;
+    flex-direction: column;
+}
