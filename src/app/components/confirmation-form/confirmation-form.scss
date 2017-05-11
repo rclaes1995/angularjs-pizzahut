@@ -1,0 +1,100 @@
+.order {
+    background: #2f2f2f;
+    color: white;
+}
+
+.order__actions {
+    text-align: center;
+}
+
+.order__button {
+    display: inline-block;
+    font-family: 'Lobster Two';
+    font-size: 3rem;
+    padding: 2rem 5rem;
+    margin: 3rem 0;
+    background-color: #e6332a;
+    color: #fff;
+    border: 0;
+    border-radius: 2px;
+    transition: all .2s linear;
+    &:hover,
+    &:active,
+    &:visited,
+    &:focus {
+        cursor: pointer;
+        background-color: darken(#e6332a, 10%);
+        color: #fff;
+        text-decoration: none;
+    }
+    &:disabled {
+        cursor: not-allowed;
+        background-color: #aaa;
+        color: #2f2f2f;
+    }
+}
+
+// ===================
+.confirmation-form {
+    padding: 1rem;
+}
+
+.confirmation-form__group {
+    padding: 1rem;
+}
+
+.confirmation-form__label {
+    width: 100%;
+    border: 0;
+    font-family: 'Lobster Two';
+    font-size: 2rem;
+    color: #2f2f2f;
+}
+
+.confirmation-form__input {
+    width: 100%;
+    background-color: #fafafa;
+    border: 0;
+    padding: 1rem .5rem;
+    border-bottom: 2px solid #ccc;
+    &:focus {
+        outline: none;
+        border-bottom: 2px solid #e6332a;
+    }
+}
+
+.confirmation-form__textarea {
+    resize: none;
+    width: 100%;
+    background-color: #fafafa;
+    border: 0;
+    padding: 1rem .5rem;
+    min-height: 10rem;
+    border-bottom: 2px solid #ccc;
+    &:focus {
+        outline: none;
+        border-bottom: 2px solid #e6332a;
+    }
+}
+
+.confirmation-form__button {
+    width: 100%;
+    background-color: #e6332a;
+    border-radius: 2px;
+    font-family: 'Lobster Two';
+    color: #fff;
+    font-size: 2rem;
+    border: 0;
+    padding: 1rem;
+    &:hover,
+    &:focus,
+    &:active {
+        outline: none;
+        background-color: darken(#e6332a, 10%);
+    }
+}
+
+.required {
+    font-size: 1.2rem;
+    vertical-align: top;
+}

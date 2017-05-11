@@ -1,0 +1,9 @@
+<div class="order-row">
+  <h1 class="text-center">Your order</h1>
+  <order-item class="col-xs-4" order-title="$ctrl.selectedPizza.description"></order-item>
+  <order-item class="col-xs-4" order-title="$ctrl.selectedCrust.label"></order-item>
+  <order-item class="col-xs-4" order-title="$ctrl.selectedSize.label"></order-item>
+  <div class="order__actions">
+    <button ng-click="$ctrl.confirm($ctrl.selectedPizza, $ctrl.selectedCrust, $ctrl.selectedSize)" class="order__button" ng-disabled="!$ctrl.selectedPizza || !$ctrl.selectedCrust || !$ctrl.selectedSize">Place order</a>
+    </div>
+  </div>

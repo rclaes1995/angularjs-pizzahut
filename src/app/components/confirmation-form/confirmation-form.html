@@ -1,0 +1,24 @@
+<div class="col-xs-6 order">
+  <h1 class="text-center">Your order</h1>
+  <order-item order-title="$ctrl.pizza.description"></order-item>
+  <order-item order-title="$ctrl.crust.label"></order-item>
+  <order-item order-title="$ctrl.size.label"></order-item>
+</div>
+<div class="col-xs-6 confirmation-form">
+  <form>
+    <div class="confirmation-form__group">
+      <label for="" class="confirmation-form__label">Your name <i class="fa fa-asterisk required" aria-hidden="true"></i>
+</label>
+      <input type="text" class="confirmation-form__input" ng-model="$ctrl.name" required />
+    </div>
+    <div class="confirmation-form__group">
+      <label for="" class="confirmation-form__label">Remarks/extras</label>
+      <textarea type="text" class="confirmation-form__textarea" ng-model="$ctrl.remarks" placeholder="Leave this empty if you have no remarks or if you want no extra toppings"></textarea>
+    </div>
+    <div class="confirmation-form__group">
+      <button type="submit" ng-click="$ctrl.confirmOrder({name: $ctrl.name, remarks: $ctrl.remarks})" class="confirmation-form__button">
+        Confirm order
+      </button>
+    </div>
+  </form>
+</div>
