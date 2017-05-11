@@ -1,20 +1,26 @@
-h1, h2, h3, h4 {
-  font-family: 'Lobster Two';
+@import 'base.scss';
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: 'Lobster Two';
 }
 
 body {
-  font-family: 'Cabin';
-  background-color: #fafafa;
+    font-family: 'Cabin';
+    background-color: $primary-color;
+    color: #fff;
 }
 
 * {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 a {
-  color: #e6332a;
-  text-decoration: underline;
-  &:hover {
-    color: darken(#e6332a, 10%);
-  }
+    color: $primary-color;
+    text-decoration: underline;
+    &:hover {
+        color: darken($primary-color, 10%);
+    }
 }

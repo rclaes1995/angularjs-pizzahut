@@ -3,18 +3,29 @@
     text-align: center;
 }
 
+.orders__title {
+  font-size: 5rem;
+  text-align: center;
+  margin: 5rem 0;
+}
+
 .order {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
     background: #2f2f2f;
-    color: #fff;
+    color: #fafafa;
     font-family: 'Lobster Two';
     font-size: 2rem;
     padding: 1.5rem 0;
     padding-left: 1.5rem;
-    margin-bottom: .2rem;
+}
+
+.order--space {
+  margin: .5rem 0;
+  border-radius: 2px;
+  border-bottom: .5rem solid #fafafa;
 }
 
 .order__description {
@@ -26,14 +37,21 @@
 }
 
 .order__highlight {
-  color: #fff;
+    color: #fff;
 }
 
 .order__remarks {
     font-family: 'Cabin';
     font-size: 1.5rem;
-    margin: 1rem 0;
-    padding-left: 2rem;
-    line-height: 4rem;
+    margin: .5rem .5rem;
+    padding-left: 1rem;
+    line-height: 3rem;
+    font-style: italic;
     border-left: .5rem solid #ccc;
+}
+
+.order__info {
+  margin: .5rem 0;
+  font-family: 'Cabin';
+  font-size: 1.6rem;
 }

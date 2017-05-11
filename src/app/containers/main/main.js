@@ -29,11 +29,13 @@ function MainController(PizzaService) {
     });
 
     vm.sizeOptions = [];
-    priceGroups.forEach(function (priceGroup) {
+    priceGroups.reverse().forEach(function (priceGroup) {
       vm.sizeOptions = vm.sizeOptions.concat(vm.selectedPizza.options[1].values.filter(function (val) {
         return val.id === priceGroup.priceGroup2;
       }));
     });
+
+    vm.selectedSize = null;
   };
 
   vm.selectSize = function (option) {

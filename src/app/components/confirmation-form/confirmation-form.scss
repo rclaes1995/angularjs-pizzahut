@@ -1,3 +1,5 @@
+@import '../../../base.scss';
+
 .order {
     background: #2f2f2f;
     color: white;
@@ -13,7 +15,7 @@
     font-size: 3rem;
     padding: 2rem 5rem;
     margin: 3rem 0;
-    background-color: #e6332a;
+    background-color: $primary-color;
     color: #fff;
     border: 0;
     border-radius: 2px;
@@ -23,7 +25,7 @@
     &:visited,
     &:focus {
         cursor: pointer;
-        background-color: darken(#e6332a, 10%);
+        background-color: darken($primary-color, 10%);
         color: #fff;
         text-decoration: none;
     }
@@ -41,6 +43,7 @@
 
 .confirmation-form__group {
     padding: 1rem;
+    color: #2f2f2f;
 }
 
 .confirmation-form__label {
@@ -59,7 +62,7 @@
     border-bottom: 2px solid #ccc;
     &:focus {
         outline: none;
-        border-bottom: 2px solid #e6332a;
+        border-bottom: 2px solid $primary-color;
     }
 }
 
@@ -73,13 +76,13 @@
     border-bottom: 2px solid #ccc;
     &:focus {
         outline: none;
-        border-bottom: 2px solid #e6332a;
+        border-bottom: 2px solid $primary-color;
     }
 }
 
 .confirmation-form__button {
     width: 100%;
-    background-color: #e6332a;
+    background-color: $primary-color;
     border-radius: 2px;
     font-family: 'Lobster Two';
     color: #fff;
@@ -90,7 +93,7 @@
     &:focus,
     &:active {
         outline: none;
-        background-color: darken(#e6332a, 10%);
+        background-color: darken($primary-color, 10%);
     }
 }
 

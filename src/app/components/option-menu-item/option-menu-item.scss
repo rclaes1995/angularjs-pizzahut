@@ -2,8 +2,9 @@
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    border: 1px solid #ccc;
     background-color: #fff;
+    border-radius: 2px;
+    color: #2f2f2f;
     margin-bottom: .5rem;
     &:hover {
         cursor: pointer;
@@ -11,7 +12,6 @@
     &.active {
         background: #2f2f2f;
         color: white;
-        border: 1px solid #0f0f0f;
         &:hover {
             .option-menu-item__title {
                 color: white;
@@ -21,7 +21,6 @@
     &:not(.active) {
         &:hover {
             background: #2f2f2f;
-            border: 1px solid #0f0f0f;
             color: white;
             transition: all .2s linear;
         }
@@ -32,6 +31,7 @@
     padding: 1rem;
     height: auto;
     width: 15rem;
+    border-radius: 2px;
     margin-right: 2rem;
 }
 
