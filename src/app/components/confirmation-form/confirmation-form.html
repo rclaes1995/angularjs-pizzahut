@@ -1,8 +1,6 @@
-<div class="col-xs-6 order">
+<div class="col-xs-6 order__confirmation">
   <h1 class="text-center">Your order</h1>
-  <order-item order-title="$ctrl.pizza.description"></order-item>
-  <order-item order-title="$ctrl.crust.label"></order-item>
-  <order-item order-title="$ctrl.size.label"></order-item>
+  <p>{{$ctrl.size.label}} {{$ctrl.crust.label}} {{$ctrl.pizza.description}}</p>
 </div>
 <div class="col-xs-6 confirmation-form">
   <form>

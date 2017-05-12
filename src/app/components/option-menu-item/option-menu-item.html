@@ -1,8 +1,9 @@
-<div class="option-menu-item col-xs-12" ng-click="$ctrl.selectOption($ctrl.crust)" ng-class="{active: $ctrl.selectedOption.label == $ctrl.option.label}">
+<div class="option-menu-item col-xs-12" ng-click="$ctrl.selectOption($ctrl.crust)" ng-class="{active: $ctrl.selectedOption.label && $ctrl.selectedOption.label == $ctrl.option.label || $ctrl.selectedOption.description && $ctrl.selectedOption.description === $ctrl.option.description}">
   <img class="option-menu-item__image" ng-if="$ctrl.option.image" ng-src="https://cdn-catalog.pizzahut.be/images/be/{{ $ctrl.option.image }}" />
+  <img class="option-menu-item__image option-menu-item__image--round" ng-if="$ctrl.option.images" ng-src="https://cdn-catalog.pizzahut.be/images/be/{{ $ctrl.option.images.DEFAULT }}" />
   <div class="option-menu-item__description">
     <h3 class="option-menu-item__title">
-      {{ $ctrl.option.label }}
+      {{ $ctrl.option.label || $ctrl.option.description }}
     </h3>
     <p>{{ $ctrl.option.text }}</p>
   </div>

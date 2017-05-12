@@ -1,14 +1,17 @@
 <div class="container-fluid">
-  <fountain-title></fountain-title>
+  <page-title></page-title>
   <main class="row">
 
     <order selected-pizza="$ctrl.selectedPizza" selected-crust="$ctrl.selectedCrust" selected-size="$ctrl.selectedSize"></order>
 
-    <pizza-menu select-pizza="$ctrl.selectPizza(pizza)" pizzas="$ctrl.pizzas" selected-pizza="$ctrl.selectedPizza"></pizza-menu>
+    <!--<pizza-menu select-pizza="$ctrl.selectPizza(pizza)" pizzas="$ctrl.pizzas" selected-pizza="$ctrl.selectedPizza"></pizza-menu>-->
+
+    <option-menu select-option="$ctrl.selectPizza(option)" selected-option="$ctrl.selectedPizza" options="$ctrl.pizzas"
+      menu-title="1. Choose a pizza"></option-menu>
     <option-menu ng-if="$ctrl.selectedPizza" select-option="$ctrl.selectCrust(option)" selected-option="$ctrl.selectedCrust" options="$ctrl.selectedPizza.options[0].values"
       menu-title="2. Choose a crust"></option-menu>
     <option-menu ng-if="$ctrl.selectedCrust" select-option="$ctrl.selectSize(option)" selected-option="$ctrl.selectedSize" options="$ctrl.sizeOptions"
       menu-title="3. Choose a size"></option-menu>
   </main>
-  <fountain-footer></fountain-footer>
+  <page-footer></page-footer>
 </div>

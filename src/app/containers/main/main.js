@@ -13,10 +13,12 @@ function MainController(PizzaService) {
   vm.selectedCrust = null;
   vm.selectedSize = null;
 
-  PizzaService.get()
-    .then(function (pizzas) {
-      vm.pizzas = pizzas;
-    });
+  vm.loadPizzas = function () {
+    PizzaService.get()
+      .then(function (pizzas) {
+        vm.pizzas = pizzas;
+      });
+  };
 
   vm.selectPizza = function (option) {
     vm.selectedPizza = option;
@@ -41,4 +43,6 @@ function MainController(PizzaService) {
   vm.selectSize = function (option) {
     vm.selectedSize = option;
   };
+
+  vm.loadPizzas();
 }

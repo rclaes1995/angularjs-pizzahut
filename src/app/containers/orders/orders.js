@@ -8,6 +8,7 @@ angular
 function OrdersController($rootScope) {
   var vm = this;
   var database = firebase.database();
+
   var calculateStartTime = function () {
     if (moment().weekday() <= 2) {
       return moment().weekday(-5).hour(13).minute(0).second(0).valueOf();
