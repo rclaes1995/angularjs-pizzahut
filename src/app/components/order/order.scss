@@ -16,8 +16,8 @@
     font-size: 3rem;
     padding: 2rem 5rem;
     margin: 3rem 0;
-    background-color: #fafafa;
-    color: #2f2f2f;
+    background-color: $contrasting-color;
+    color: #fff;
     border: 0;
     border-radius: 2px;
     transition: background-color .2s linear;
@@ -26,8 +26,7 @@
     &:visited,
     &:focus {
         cursor: pointer;
-        background-color: $primary-color;
-        color: #fff;
+        opacity: .8;
         text-decoration: none;
     }
     &:disabled {

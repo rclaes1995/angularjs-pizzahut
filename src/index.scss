@@ -10,7 +10,7 @@ h4 {
 body {
     font-family: 'Cabin';
     background-color: $primary-color;
-    color: #fff;
+    color: #2f2f2f;
 }
 
 * {
@@ -18,9 +18,10 @@ body {
 }
 
 a {
-    color: $primary-color;
+    color: $contrasting-color;
     text-decoration: underline;
     &:hover {
-        color: darken($primary-color, 10%);
+      opacity: .8;
+      color: $contrasting-color;
     }
 }
