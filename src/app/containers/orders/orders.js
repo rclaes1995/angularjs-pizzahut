@@ -10,7 +10,7 @@ function OrdersController($rootScope) {
   var database = firebase.database();
 
   var calculateStartTime = function () {
-    if (moment().weekday() <= 2) {
+    if ((moment().weekday() === 2 && moment().hour() < 13) || moment().weekday() < 2) {
       return moment().weekday(-5).hour(13).minute(0).second(0).valueOf();
     }
     return moment().weekday(2).hour(13).minute(0).second(0).valueOf();
