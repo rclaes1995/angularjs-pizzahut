@@ -5,20 +5,8 @@ angular
     controller: MainController
   });
 
-function MainController(PizzaService) {
+function MainController($state, PizzaService) {
   var vm = this;
-  vm.pizzas = null;
-
-  vm.selectedPizza = null;
-  vm.selectedCrust = null;
-  vm.selectedSize = null;
-
-  vm.loadPizzas = function () {
-    PizzaService.get()
-      .then(function (pizzas) {
-        vm.pizzas = pizzas;
-      });
-  };
 
   vm.selectPizza = function (option) {
     vm.selectedPizza = option;
@@ -42,6 +30,17 @@ function MainController(PizzaService) {
 
   vm.selectSize = function (option) {
     vm.selectedSize = option;
+  };
+
+  vm.confirm = function () {
+    $state.go('confirm', { pizza: vm.selectedPizza, crust: vm.selectedCrust, size: vm.selectedSize });
+  };
+
+  vm.loadPizzas = function () {
+    PizzaService.get()
+      .then(function (pizzas) {
+        vm.pizzas = pizzas;
+      });
   };
 
   vm.loadPizzas();
