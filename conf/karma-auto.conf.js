@@ -19,6 +19,9 @@ module.exports = function (config) {
       'angular-filesort'
     ],
     files: listFiles(),
+    exclude: [
+      conf.path.tmp('app.js')
+    ],
     preprocessors: {
       [conf.path.src('**/*.html')]: [
         'ng-html2js'
