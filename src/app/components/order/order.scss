@@ -1,5 +1,4 @@
 @import '../../../base.scss';
-
 .order-row {
     background: #2f2f2f;
     color: white;
@@ -7,7 +6,9 @@
 }
 
 .order__actions {
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    width: 100%;
 }
 
 .order__button {

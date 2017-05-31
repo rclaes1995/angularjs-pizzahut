@@ -7,6 +7,7 @@ angular
 
 function OrdersController($rootScope) {
   var vm = this;
+
   var database = firebase.database();
 
   var calculateStartTime = function () {
@@ -22,7 +23,8 @@ function OrdersController($rootScope) {
 
   ordersRef.on('value', function (orders) {
     vm.orders = orders.val();
-    vm.ordersLength = Object.keys(vm.orders).length;
+    vm.ordersLength = vm.orders ? Object.keys(vm.orders).length : 0;
+    vm.isOrdersLoaded = true;
     $rootScope.$digest();
   });
 }
